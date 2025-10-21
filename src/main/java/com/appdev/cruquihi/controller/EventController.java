@@ -19,13 +19,13 @@ public class EventController {
     }
 
     // CREATE
-    @PostMapping
+    @PostMapping("/add")
     public EventEntity createEvent(@RequestBody EventEntity event) {
         return eventRepo.save(event);
     }
 
     // READ ALL
-    @GetMapping
+    @GetMapping("/all")
     public List<EventEntity> getAllEvents() {
         return eventRepo.findAll();
     }

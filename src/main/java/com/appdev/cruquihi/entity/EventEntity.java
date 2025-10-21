@@ -37,6 +37,24 @@ public class EventEntity {
         super();
     }
 
+    public EventEntity(int eventId, UserEntity user, String eventName, String eventDescription,
+                   String eventVenue, LocalDateTime eventStartTime, LocalDateTime eventEndTime,
+                   String eventStatus, String eventCategory, String createdBy,
+                   LocalDateTime createdAt, int ticketLimit) {
+    super();
+    this.user = user;
+    this.eventName = eventName;
+    this.eventDescription = eventDescription;
+    this.eventVenue = eventVenue;
+    this.eventStartTime = eventStartTime;
+    this.eventEndTime = eventEndTime;
+    this.eventStatus = eventStatus;
+    this.eventCategory = eventCategory;
+    this.createdBy = createdBy;
+    this.createdAt = createdAt;
+    this.ticketLimit = ticketLimit;
+}
+
     // Getters and Setters
     public int getEventId() { 
         return eventId; 

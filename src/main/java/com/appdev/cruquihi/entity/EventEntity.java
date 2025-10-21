@@ -30,7 +30,7 @@ public class EventEntity {
     private String eventCategory;
     private String createdBy;
     private LocalDateTime createdAt;
-    private Integer ticketLimit;
+    private int ticketLimit;
 
     // Constructors
     public EventEntity() {
@@ -115,10 +115,10 @@ public class EventEntity {
         this.createdAt = createdAt; 
     }
 
-    public Integer getTicketLimit() { 
+    public int getTicketLimit() { 
         return ticketLimit; 
     }
-    public void setTicketLimit(Integer ticketLimit) { 
+    public void setTicketLimit(int ticketLimit) { 
         this.ticketLimit = ticketLimit; 
     }
     

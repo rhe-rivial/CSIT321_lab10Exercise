@@ -41,7 +41,7 @@ public class UserService {
         try{
             user = urepo.findById(id).get();
             user.setFullname(newUserDetails.getFullname());
-            user.setEmail(newUserDetails.getEmailAddress());
+            user.setEmailAddress(newUserDetails.getEmailAddress());
         } catch (NoSuchElementException e) {
            throw new NoSuchElementException("User with ID " + id + " not found.");
         } finally {

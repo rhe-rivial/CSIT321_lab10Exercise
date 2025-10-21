@@ -15,7 +15,7 @@ import jakarta.persistence.Table;
 public class EventEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long eventId;
+    private int eventId;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
@@ -30,7 +30,7 @@ public class EventEntity {
     private String eventCategory;
     private String createdBy;
     private LocalDateTime createdAt;
-    private Integer ticketLimit;
+    private int ticketLimit;
 
     // Constructors
     public EventEntity() {
@@ -38,10 +38,10 @@ public class EventEntity {
     }
 
     // Getters and Setters
-    public Long getEventId() { 
+    public int getEventId() { 
         return eventId; 
     }
-    public void setEventId(Long eventId) { 
+    public void setEventId(int eventId) { 
         this.eventId = eventId; 
     }
 
@@ -115,10 +115,10 @@ public class EventEntity {
         this.createdAt = createdAt; 
     }
 
-    public Integer getTicketLimit() { 
+    public int getTicketLimit() { 
         return ticketLimit; 
     }
-    public void setTicketLimit(Integer ticketLimit) { 
+    public void setTicketLimit(int ticketLimit) { 
         this.ticketLimit = ticketLimit; 
     }
     

@@ -31,17 +31,17 @@ public class UserService {
     }
 
     // READ BY ID
-    public Optional<UserEntity> getUserById(Integer id) {
+    public Optional<UserEntity> getUserById(int id) {
         return urepo.findById(id);
     }
 
     // UPDATE
-    public UserEntity updateUser(Integer id, UserEntity newUserDetails) {
+    public UserEntity updateUser(int id, UserEntity newUserDetails) {
         UserEntity user = new UserEntity();
         try{
             user = urepo.findById(id).get();
             user.setFullname(newUserDetails.getFullname());
-            user.setEmail(newUserDetails.getEmailAddress());
+            user.setEmailAddress(newUserDetails.getEmailAddress());
         } catch (NoSuchElementException e) {
            throw new NoSuchElementException("User with ID " + id + " not found.");
         } finally {
@@ -50,7 +50,7 @@ public class UserService {
     }
 
     // DELETE
-    public String deleteUser(Integer id) {
+    public String deleteUser(int id) {
         String msg = "";
 
         if (urepo.findById(id) != null) {

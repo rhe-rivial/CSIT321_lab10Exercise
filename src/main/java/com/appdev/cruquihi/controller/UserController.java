@@ -31,19 +31,19 @@ public class UserController {
 
     // READ BY ID
     @GetMapping("/{id}")
-    public Optional<UserEntity> getUserById(@PathVariable Integer id) {
+    public Optional<UserEntity> getUserById(@PathVariable int id) {
         return sserv.getUserById(id);
     }
 
     // UPDATE
     @PutMapping("/update/{id}")
-    public UserEntity updateUser(@RequestParam Integer id, @RequestBody UserEntity newUserDetails) {
+    public UserEntity updateUser(@RequestParam int id, @RequestBody UserEntity newUserDetails) {
         return sserv.updateUser(id, newUserDetails);
     }
 
     // DELETE
     @DeleteMapping("/delete/{id}")
-    public String deleteUser(@PathVariable Integer id) {
+    public String deleteUser(@PathVariable int id) {
         sserv.deleteUser(id);
         return "User with ID " + id + " has been deleted.";
     }

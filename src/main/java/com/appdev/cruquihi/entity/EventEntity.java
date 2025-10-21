@@ -15,7 +15,7 @@ import jakarta.persistence.Table;
 public class EventEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long eventId;
+    private int eventId;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
@@ -38,10 +38,10 @@ public class EventEntity {
     }
 
     // Getters and Setters
-    public Long getEventId() { 
+    public int getEventId() { 
         return eventId; 
     }
-    public void setEventId(Long eventId) { 
+    public void setEventId(int eventId) { 
         this.eventId = eventId; 
     }
 

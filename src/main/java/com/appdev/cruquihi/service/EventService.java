@@ -31,12 +31,12 @@ public class EventService {
     }
 
     // READ BY ID
-    public Optional<EventEntity> getEventById(Integer id) {
+    public Optional<EventEntity> getEventById(int id) {
         return erepo.findById(id);
     }
 
     // UPDATE
-    public EventEntity updateEvent(Integer id, EventEntity newEventDetails) {
+    public EventEntity updateEvent(int id, EventEntity newEventDetails) {
         EventEntity event = new EventEntity();
         try {
             event = erepo.findById(id).get();
@@ -58,7 +58,7 @@ public class EventService {
     }
 
     // DELETE
-    public String deleteEvent(Integer id) {
+    public String deleteEvent(int id) {
         String msg = "";
 
         if (erepo.findById(id).isPresent()) {

@@ -32,13 +32,13 @@ public class EventController {
 
     // READ ONE
     @GetMapping("/{id}")
-    public EventEntity getEventById(@PathVariable Integer id) {
+    public EventEntity getEventById(@PathVariable int id) {
         return eventRepo.findById(id).orElse(null);
     }
 
     // UPDATE
     @PutMapping("/{id}")
-    public EventEntity updateEvent(@PathVariable Integer id, @RequestBody EventEntity updatedEvent) {
+    public EventEntity updateEvent(@PathVariable int id, @RequestBody EventEntity updatedEvent) {
         return eventRepo.findById(id).map(event -> {
             event.setEventName(updatedEvent.getEventName());
             event.setEventDescription(updatedEvent.getEventDescription());
@@ -54,7 +54,7 @@ public class EventController {
 
     // DELETE
     @DeleteMapping("/{id}")
-    public String deleteEvent(@PathVariable Integer id) {
+    public String deleteEvent(@PathVariable int id) {
         eventRepo.deleteById(id);
         return "Event deleted successfully.";
     }
